@@ -36,9 +36,15 @@ npm run start
 
 在瀏覽器輸入 [http://localhost:3000](http://localhost:3000) 來使用密碼產生器。
 
+## 圖片 (Screenshots)
+![image](https://github.com/wang-yin/password-generator/blob/main/screenshots/RandomPasswordGenerator.png)
+
 ## 使用工具 (Tools)
 
 - 開發環境：[Visual Studio Code](https://visualstudio.microsoft.com/zh-hant/)
 - 應用程式框架：[Express](https://www.npmjs.com/package/express)
 - 樣版引擎：[Express-handlebars](https://www.npmjs.com/package/express-handlebars)
 - 樣式框架：[Bootstrap](https://getbootstrap.com/)
+
+## 開發者 (Contributor)
+[Wang yin](https://github.com/wang-yin)
