@@ -1,0 +1,11 @@
+body {
+  background-color: rgb(51, 58, 64);
+}
+
+nav {
+  background-color: rgb(106, 117, 126);
+
+  a {
+    color: white;
+  }
+}

@@ -1,0 +1,67 @@
+<form class="card p-5 needs-validation" id="form" method="post" action="/result" novalidate>
+  <p class="fw-bolder fs-3">Random Password Generator</p>
+  <hr>
+  </hr>
+  <div class="mb-3 row">
+    <label for="name" class="col-sm-4 col-form-label">Password Length</label>
+    <div class="col-sm-8">
+      <input type="number" class="form-control" id="pw-length" name="length" min="4" max="16" value="{{option.length}}"
+        required>
+      <div class="invalid-feedback">This field is required and the number must be between 4 and 16.</div>
+      <div id="pwLengthHelp" class="form-text">Length is available between 4 ~ 16.</div>
+    </div>
+  </div>
+
+  <div class="row mb-3 align-items-center">
+    <div class="col-form-label col-sm-4">Include Lowercase Characters</div>
+    <div class="form-check col-sm-8">
+      <input class="form-check-input" type="checkbox" id="lowercase" name="lowercase" {{#if
+        option.lowercase}}checked{{/if}}>
+      <label class="form-check-label" for="lowercase">
+        (e.g. abcdefg)
+      </label>
+    </div>
+  </div>
+  <div class="row mb-3 align-items-center">
+    <div class="col-form-label col-sm-4">Include Uppercase Characters</div>
+    <div class="form-check col-sm-8">
+      <input class="form-check-input" type="checkbox" id="uppercase" name="uppercase" {{#if
+        option.uppercase}}checked{{/if}}>
+      <label class="form-check-label" for="uppercase">
+        (e.g. ABCDEFG)
+      </label>
+    </div>
+  </div>
+  <div class="row mb-3 align-items-center">
+    <div class="col-form-label col-sm-4">Include Numbers</div>
+    <div class="form-check col-sm-8">
+      <input class="form-check-input" type="checkbox" id="numbers" name="numbers" {{#if option.numbers}}checked{{/if}}>
+      <label class="form-check-label" for="numbers">
+        (e.g. 123456)
+      </label>
+    </div>
+  </div>
+  <div class="row mb-3 align-items-center">
+    <div class="col-form-label col-sm-4">Include Symbols</div>
+    <div class="form-check col-sm-8">
+      <input class="form-check-input" type="checkbox" id="symbols" name="symbols" {{#if option.symbols}}checked{{/if}}>
+      <label class="form-check-label" for="symbols">
+        (e.g. @#$%*)
+      </label>
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="exclude" class="col-sm-4 col-form-label">Exclude Characters</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="exclude" name="exclude" value="{{option.exclude}}">
+      <div id="excludeHelp" class="form-text">These characters will not appear in the password.</div>
+    </div>
+  </div>
+  <div class="result">
+    {{{result}}}
+  </div>
+  <div class="footer">
+    <button class="btn btn-success" type="submit">Generator Password</button>
+  </div>
+</form>
+</div>
